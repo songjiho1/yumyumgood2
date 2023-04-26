@@ -8,17 +8,17 @@ $(document).ready(function() {
 		if ($(this).is(':checked')) {
 			$(this)
 				.closest('.category-list')
-				.css('background-color', 'rgba(120, 119, 119, 0.9)');
+				.css('background-color', 'rgb(255 147 0 / 32%)');
 			$(this)
 				.closest('.category-list')
-				.css('color', 'white');
+				.css('color', 'rgb(145 88 40 / 79%)');
 		} else {
 			$(this)
 				.closest('.category-list')
 				.css('background-color', 'transparent');
 			$(this)
 				.closest('.category-list')
-				.css('color', 'rgb(62, 62, 62)');
+				.css('color', 'rgb(145 88 40 / 79%)');
 		}
 	});
 });
