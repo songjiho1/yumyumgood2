@@ -1098,7 +1098,10 @@ a {
 	font-family: "Josefin Slab", serif;
 }
 	
-h1{
+
+	
+.list-none{
+	font-family: "Josefin Slab", serif;
 	margin-top: 150px;
 	text-align: center;
 	font-size: 10px;
