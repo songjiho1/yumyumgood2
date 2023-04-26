@@ -122,7 +122,8 @@ a {
   text-align: center;
   text-decoration: none;
   font-size: 13px;
-  font-weight: 600
+  font-weight: 600;
+  cursor: pointer;
 }
 .followBtnOff{
 	display: inline-block;
@@ -1104,7 +1105,7 @@ a {
   width: 530px;
   height: 100%;
   position: absolute;
-  top: 25px;
+  top: 0px;
   left: -312px;
   border-right: 1px solid #dbdbdb;
   border-radius: 10px;
@@ -1117,7 +1118,7 @@ a {
   width: 530px;
   height: 100%;
   position: absolute;
-  top: 25px;
+  top: 0px;
   left: -312px;
   border-right: 1px solid #dbdbdb;
   border-radius: 10px;
@@ -1175,7 +1176,7 @@ a {
 .new-alarm {
   width: 100%;
   height: 390px;
-  border-bottom: 1px solid rgb(217, 209, 209);
+  /* border-bottom: 1px solid rgb(217, 209, 209); */
   display: flex;
     align-items: center;
     justify-content: space-around;
@@ -1229,7 +1230,7 @@ a {
 .recent-searches-box {
   /* background-color: yellow; */
   width: 100%;
-  height: 660px;
+  height: 497px;
   overflow-y: scroll;
 }
 

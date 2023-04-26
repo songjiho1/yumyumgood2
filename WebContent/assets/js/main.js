@@ -86,6 +86,31 @@ $('.search-btn').on('click', function() {
 		findPost($('.find-btn').val().trim());
 	}
 });
+
+$('.find-btn').on('keyup', function(event) {
+	let searchCate = $('.drop-down').val();
+
+	if (event.which === 13) {
+		if (searchCate == 'user') {
+			$.ajax({
+				url: '/mainAjaxOk.m',
+				type: 'get',
+				data: { input: $('.find-btn').val().trim() },
+				dataType: 'json',
+				success: function(result) {
+					console.log(result);
+					addUserInfo(result);
+					//$('.find-btn').val('');
+				},
+				error: function(a, b, c) {
+					console.log(c);
+				}
+			});
+		} else {
+			findPost($('.find-btn').val().trim());
+		}
+	}
+});
 // ================================================검색 Ajax==================================================== //
 
 function findPost(keyword) {
@@ -110,13 +135,13 @@ function findPost(keyword) {
 
 function addUserInfo(result) {
 
-	
+
 	let text = '';
-console.log(result);
+	console.log(result);
 	result.forEach(info => {
-		
-		if(info.userProfileImageSystemName==null){
-					text += `
+
+		if (info.userProfileImageSystemName == null) {
+			text += `
 			<div class="search-man">
 				<div class="man-left">
 					<a href="#"> <img
@@ -124,9 +149,9 @@ console.log(result);
 						class="man-img" />
 					</a>
 				</div>`
-			
-		}else{
-		text += `
+
+		} else {
+			text += `
 			<div class="search-man">
 				<div class="man-left">
 					<a href="#"> <img
@@ -134,10 +159,10 @@ console.log(result);
 						class="man-img" />
 					</a>
 				</div>`
-			}	
-		
-		if(info.userNumber == userNumber ){
-			text+=`<div class="man-right">
+		}
+
+		if (info.userNumber == userNumber) {
+			text += `<div class="man-right">
 					<div class="man-id">
 						<a href="/mypage/mypageOk.my?userNumber=${info.userNumber}"> ${info.userNickName} </a>
 						
@@ -148,9 +173,9 @@ console.log(result);
 				</div>
 				
 				</div>`
-			
-		}	else{	
-			text+=`	<div class="man-right">
+
+		} else {
+			text += `	<div class="man-right">
 					<div class="man-id">
 						<a href="/user/youPage.us?userNumber=${info.userNumber}"> ${info.userNickName} </a>
 						
@@ -162,7 +187,7 @@ console.log(result);
 				
 				</div>`
 		}
-		
+
 	});
 
 	$('.recent-searches-box').html(text);
@@ -181,11 +206,11 @@ console.log(result);
 $(document).ready(function() {
 	const urlSearch = new URLSearchParams(location.search);
 	const categoryNumber = urlSearch.get('categoryNumber');
-	
+
 	let $cateBox = $(".category-box");
-	
-	for(let i=0; i<$cateBox.length; i++){
-		if($cateBox.eq(i).data("id") == categoryNumber){
+
+	for (let i = 0; i < $cateBox.length; i++) {
+		if ($cateBox.eq(i).data("id") == categoryNumber) {
 			$cateBox.eq(i).addClass('selected');
 		}
 	}
