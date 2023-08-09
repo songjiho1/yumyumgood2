@@ -18,3 +18,6 @@
 ## ERD구성
 [![쿡팡 erd구성](./WebContent/assets/img/erdImg/cookpnagERD2.png)](https://dbdiagram.io/d/642008425758ac5f17242b13)
 
+### 메인 페이지 - <a href="https://github.com/songjiho1/yumyumgood2/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(Main)" >상세보기 - WIKI 이동</a>
+
+### 마이 페이지 - <a href="https://github.com/songjiho1/yumyumgood2/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(MyPage)">상세보기 - WIKI 이동</a>
